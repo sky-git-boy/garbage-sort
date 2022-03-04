@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.ChallengeDetailMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.ChallengeDetail">
+        <!--@mbg.generated-->
+        <!--@Table challenge_detail-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="whether" jdbcType="TINYINT" property="whether"/>
+        <result column="question_id" jdbcType="INTEGER" property="questionId"/>
+        <result column="garbage_name" jdbcType="VARCHAR" property="garbageName"/>
+        <result column="garbage_type" jdbcType="TINYINT" property="garbageType"/>
+        <result column="selected_type" jdbcType="TINYINT" property="selectedType"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, whether, question_id, garbage_name, garbage_type, selected_type
+    </sql>
+</mapper>

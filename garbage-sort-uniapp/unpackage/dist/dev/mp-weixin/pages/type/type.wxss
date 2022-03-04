@@ -1,0 +1,134 @@
+.fixed-ad{
+	position: fixed;
+	z-index: 999;
+}
+.nav {
+	margin-top: 10rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 100%;
+}
+.nav-left {
+	width: 30%;
+	/* border: 2upx solid red; */
+	/* background-color: #ddd; */
+}
+.nav-left-item {
+	height: 120rpx;
+	/* border-right: solid 1px #E0E0E0; */
+	/* border-bottom: solid 1px #E0E0E0; */
+	font-size: 32rpx;
+	/* color: #FFFFFF; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	background-color: #e6e6e6;
+	color: #484242;
+	margin-bottom: 4rpx;
+}
+.garbage-gan {
+	background-color: rgb(236,162,58);
+	color: #FFFFFF;
+}
+.garbage-shi {
+	background-color: rgb(77,142,244);
+	color: #FFFFFF;
+}
+.garbage-huishou {
+	background-color: rgb(75,215,123);
+	color: #FFFFFF;
+}
+.garbage-youhai {
+	background-color: rgb(253,66,79);
+	color: #FFFFFF;
+}
+/* boder */
+.garbage-gan-border {
+	border-left: 10rpx solid rgb(236,162,58);
+}
+.garbage-shi-border {
+	border-left: 10rpx solid rgb(77,142,244);
+}
+.garbage-huishou-border {
+	border-left: 10rpx solid rgb(75,215,123);
+}
+.garbage-youhai-border {
+	border-left: 10rpx solid rgb(253,66,79);
+}
+.main-img {
+	width: 200rpx;
+	height: 200rpx;
+}
+/* 右边 的样式 */
+.nav-right {
+	width: 70%;
+}
+.nav-right-item {
+	/* width: 28%; */
+	height: 20rpx;
+	/* float: left; */
+	/* text-align: center; */
+	padding: 28rpx;
+	font-size: 32rpx;
+	/* border: 1upx solid #F24544; */
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	border-radius: 10rpx;
+}
+.style1{
+	background-color: #f5f5f5;
+}
+.active {
+	color: #F24544;
+}
+.padding {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	background-color: #F24544;
+}
+.content {
+	width: 100%;
+}
+/* 右边展示的图片 */
+.view-img{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient:horizontal;
+	-webkit-box-direction:normal;
+	-webkit-flex-direction:row ;
+	        flex-direction:row ;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.show-img{
+	width:400rpx;
+	height:500rpx;
+}
+::-webkit-scrollbar {/*取消小程序的默认导航条样式*/
+   width: 0;
+   height: 0;
+   color: transparent;
+}
+

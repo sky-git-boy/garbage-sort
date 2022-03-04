@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.LoginInfoMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.LoginInfo">
+        <!--@mbg.generated-->
+        <!--@Table sys_login_info-->
+        <id column="info_id" jdbcType="BIGINT" property="infoId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="login_account" jdbcType="VARCHAR" property="loginAccount"/>
+        <result column="ip_addr" jdbcType="VARCHAR" property="ipAddr"/>
+        <result column="login_location" jdbcType="VARCHAR" property="loginLocation"/>
+        <result column="browser" jdbcType="VARCHAR" property="browser"/>
+        <result column="os" jdbcType="VARCHAR" property="os"/>
+        <result column="login_status" jdbcType="CHAR" property="loginStatus"/>
+        <result column="login_type" jdbcType="CHAR" property="loginType"/>
+        <result column="msg" jdbcType="VARCHAR" property="msg"/>
+        <result column="login_time" jdbcType="TIMESTAMP" property="loginTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        info_id, user_name, login_account, ip_addr, login_location, browser, os, login_status,
+        login_type, msg, login_time
+    </sql>
+    <select id="getLoginWeekData" resultType="com.sky.vo.DataVo">
+
+    SELECT WEEKDAY(login_time) weekDay, COUNT(1) num FROM sys_login_info
+        WHERE login_time >= FROM_UNIXTIME(UNIX_TIMESTAMP() - WEEKDAY(NOW()) * 86400, '%Y-%m-%d')
+            GROUP BY WEEKDAY(login_time);
+
+    </select>
+</mapper>

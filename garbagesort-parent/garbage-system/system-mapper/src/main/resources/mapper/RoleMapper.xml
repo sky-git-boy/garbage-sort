@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.sky.domain.Role">
+    <!--@mbg.generated-->
+    <!--@Table sys_role-->
+    <id column="role_id" jdbcType="BIGINT" property="roleId" />
+    <result column="role_name" jdbcType="VARCHAR" property="roleName" />
+    <result column="role_code" jdbcType="VARCHAR" property="roleCode" />
+    <result column="role_sort" jdbcType="INTEGER" property="roleSort" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    role_id, role_name, role_code, role_sort, remark, `status`, create_time, update_time, 
+    create_by, update_by, del_flag
+  </sql>
+  <delete id="deleteRoleMenuByRoleIds">
+    delete from sys_role_menu
+    <where>
+        <foreach collection="ids" open=" role_id in (" separator="," close=")" item="sn">
+            #{sn}
+        </foreach>
+    </where>
+  </delete>
+  <delete id="deleteRoleUserByRoleIds">
+    delete from sys_role_user
+    <where>
+        <foreach collection="ids" open=" role_id in (" separator="," close=")" item="sn">
+            #{sn}
+        </foreach>
+    </where>
+  </delete>
+  <insert id="saveRoleMenu">
+    insert into sys_role_menu(role_id, menu_id) values (#{roleId},#{menuId})
+  </insert>
+  <delete id="deleteRoleUserByUserIds">
+    delete from sys_role_user
+    <where>
+        <foreach collection="ids" open=" user_id in (" separator="," close=")" item="sn">
+            #{sn}
+        </foreach>
+    </where>
+  </delete>
+  <delete id="deleteRoleMenuByMenuIds">
+    delete from sys_role_menu
+    <where>
+        <foreach collection="ids" open=" menu_id in (" separator="," close=")" item="sn">
+            #{sn}
+        </foreach>
+    </where>
+  </delete>
+  <select id="selectRoleIdsByUserId" resultType="java.lang.Long">
+    select role_id from sys_role_user where user_id=#{userId}
+  </select>
+  <insert id="saveRoleUser">
+    insert into sys_role_user (user_id, role_id) values (#{userId},#{roleId})
+  </insert>
+</mapper>

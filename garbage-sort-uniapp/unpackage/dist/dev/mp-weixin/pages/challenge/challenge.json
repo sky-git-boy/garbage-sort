@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "知识小测",
+  "usingComponents": {
+    "share": "/components/share"
+  }
+}

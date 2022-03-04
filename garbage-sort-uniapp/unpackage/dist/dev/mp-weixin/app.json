@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/challenge/challengeResult",
+    "pages/search/search",
+    "pages/challenge/challenge",
+    "pages/type/type",
+    "pages/webview/webview"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "垃圾分类小程序",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#8F8F94",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/homeSelected.png"
+      },
+      {
+        "pagePath": "pages/type/type",
+        "text": "分类",
+        "iconPath": "static/tabBar/type.png",
+        "selectedIconPath": "static/tabBar/typeSelected.png"
+      },
+      {
+        "pagePath": "pages/challenge/challenge",
+        "text": "小测",
+        "iconPath": "static/tabBar/challenge.png",
+        "selectedIconPath": "static/tabBar/challengeSelected.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

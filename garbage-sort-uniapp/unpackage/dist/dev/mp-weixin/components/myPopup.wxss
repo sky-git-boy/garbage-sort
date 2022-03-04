@@ -1,0 +1,127 @@
+
+.detail-show-outer {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.detail-show-inner {
+	position: fixed;
+	z-index: 999;
+	top: 100rpx;
+	right: 40rpx;
+	/* bottom: 160upx; */
+	left: 40rpx;
+	background-color: #ffffff;
+	border-radius: 20rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.inner-display {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	width: 90%;
+	/* border: 2upx solid red; */
+	margin-top: 30rpx;
+	/* justify-content: center; */
+}
+.inner-text {
+	/* justify-content: center; */
+	text-align: center;
+	margin-bottom: 10rpx;
+	font-size: 34rpx;
+}
+.inner-text-kefu {
+	font-size: 30rpx;
+	color: #72c69c;
+	border: 1px solid red;
+	font-size: 30rpx;
+	color: #72c69c;
+	border: 1px solid blue;
+	width: 50%;
+	height: 50rpx;
+	padding: 0;
+	line-height: 50rpx;
+	margin-bottom: 10rpx;
+	margin-top: 10rpx;
+}
+.inner-text-show {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.inner-button {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	        justify-content: space-between;
+}
+.text-button {
+	padding-left: 70rpx;
+	padding-right: 70rpx;
+	font-size: 28rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+}
+.i-know {
+	background-color: #007aff;
+	color: #fff;
+}
+.show-img {
+	width: 530rpx;
+	height: 600rpx;
+	margin: 30rpx 0;
+}
+.show-img-shi {
+	width: 510rpx;
+	height: 620rpx;
+}
+.show-img-huishou {
+	width: 500rpx;
+	height: 620rpx;
+}
+
+/* 文字颜色  start*/
+.garbage-gan-item {
+	color: rgb(44, 43, 39);
+}
+.garbage-shi-item {
+	color: rgb(102, 63, 52);
+}
+.garbage-huishou-item {
+	color: rgb(36, 71, 131);
+}
+.garbage-youhai-item {
+	color: rgb(229, 49, 34);
+}
+.text-margin-left {
+	margin-left: 10rpx;
+}
+
+/* 文字颜色 end */
+

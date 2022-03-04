@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.OperLogMapper">
+  <resultMap id="BaseResultMap" type="com.sky.domain.OperLog">
+    <!--@mbg.generated-->
+    <!--@Table sys_oper_log-->
+    <id column="oper_id" jdbcType="BIGINT" property="operId" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="business_type" jdbcType="CHAR" property="businessType" />
+    <result column="method" jdbcType="VARCHAR" property="method" />
+    <result column="request_method" jdbcType="VARCHAR" property="requestMethod" />
+    <result column="operator_type" jdbcType="INTEGER" property="operatorType" />
+    <result column="oper_name" jdbcType="VARCHAR" property="operName" />
+    <result column="oper_url" jdbcType="VARCHAR" property="operUrl" />
+    <result column="oper_ip" jdbcType="VARCHAR" property="operIp" />
+    <result column="oper_location" jdbcType="VARCHAR" property="operLocation" />
+    <result column="oper_param" jdbcType="VARCHAR" property="operParam" />
+    <result column="json_result" jdbcType="VARCHAR" property="jsonResult" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="error_msg" jdbcType="VARCHAR" property="errorMsg" />
+    <result column="oper_time" jdbcType="TIMESTAMP" property="operTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    oper_id, title, business_type, `method`, request_method, operator_type, oper_name, 
+    oper_url, oper_ip, oper_location, oper_param, json_result, `status`, error_msg, oper_time
+  </sql>
+</mapper>

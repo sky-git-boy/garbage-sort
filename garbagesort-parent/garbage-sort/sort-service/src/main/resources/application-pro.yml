@@ -1,0 +1,36 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.113.231.131:3306/garbage-sort?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 12347890
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 20
+      min-idle: 5
+      validation-query: select x
+      initial-size: 3
+      max-wait: 5000
+      stat-view-servlet:
+        #        login-username: root
+        #        login-password: 123456
+        allow:
+        deny:
+        url-pattern: /druid/*
+        enabled: true  #启用数据源监控
+#mybatisplus的配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto
+#dubbo配置
+dubbo:
+  application:
+    name: hos-erp-service
+  registry:
+    address: zookeeper://www.sky28.top:2181
+  consumer:
+    check: false

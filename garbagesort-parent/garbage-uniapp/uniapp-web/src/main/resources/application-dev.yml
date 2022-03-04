@@ -1,0 +1,77 @@
+server:
+  port: 8122
+  servlet:
+    context-path: /uniapp
+
+# 百度请求api 管理
+baidu:
+  appid: 24040004
+  apikey: xT6faqZoykQKqutaHYOou7fo
+  secretkey: LyUeCByAbfE3BYmnz4PymepF3blDlhxh
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.113.231.131:3306/garbage-sort?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 12347890
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      max-active: 20
+      min-idle: 5
+      validation-query: select x
+      initial-size: 3
+      max-wait: 5000
+      stat-view-servlet:
+        allow:
+        deny:
+        url-pattern: /druid/*
+        enabled: true  #启用数据源监控
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+#mybatisplus的配置
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*Mapper.xml
+  global-config:
+    db-config:
+      id-type: auto
+
+# 文件路径管理
+upload:
+  base-url: http://47.113.231.131:8888
+  allow-types:
+    - image/jpeg
+    - image/png
+    - image/bmp
+    - image/jpg
+    - video/mp4
+    - application/octet-stream
+    - audio/wave
+  record:
+    path: F:\home\
+
+#fastdfs的配置
+fdfs:
+  so-timeout: 15000       # 读取时间
+  connect-timeout: 15000   # 连接超时时间
+  thumb-image:           # 缩略图
+    width: 100
+    height: 100
+  pool:
+    max-total: 200
+    max-idle-per-key: 50
+    max-wait-millis: 5000
+  tracker-list:          # tracker服务配置地址列表
+    - 47.113.231.131:22122
+
+# 阿里云 oss 配置
+aliyun:
+  accessKeyId: LTAI4G4apy5YdweiL54VTA8o
+  accessKeySecret: zTwkYbyH3IS3eYyi4BDxET3rE7NYJT
+  bucketName: garbage-sorting
+  endPoint: oss-cn-shenzhen.aliyuncs.com

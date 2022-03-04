@@ -1,0 +1,104 @@
+.content{
+	/* left: 750upx; */
+	/* position: absolute; */
+	/* width: 700upx; */
+	/* height: 600upx; */
+	/* background-color: #007AFF; */
+}
+
+.top-text {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 20upx;
+
+}
+
+.gary {
+	color: #999999;
+	margin-left: 8upx;
+}
+
+/* 图像显示区  start */
+.main-classify {
+	display: flex;
+	direction: center;
+	justify-content: center;
+}
+
+.main-img {
+	width: 240upx;
+	height: 240upx;
+	padding: 20upx;
+}
+
+/* 图像显示区  end */
+.title {
+	text-align: center;
+	margin: 20upx auto;
+	font-size: 40upx;
+	/* color: #72c69c; */
+
+}
+
+.main-panel {
+	padding: 0 5%;
+}
+
+.quesion-panel {
+	display: flex;
+	flex-direction: column;
+	margin: 150upx 0 0 0;
+	font-size: 40rpx;
+}
+
+.quesion-panel-item1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20upx;
+}
+
+.quesion-panel-item2 ,.quesion-panel-item3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.quesion-panel-item3 .gary{
+	font-size: 30upx;
+	margin-top: 10upx;
+}
+
+.quesion-panel-text {
+	color: #e96900;
+	font-size: 46upx;
+	margin-right: 20upx;
+}
+.exam_xuan {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.exam_item {
+  border: 1rpx solid #dedede;
+  width: 300rpx;
+  padding: 20rpx;
+  border-radius: 50rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+  font-size: 30rpx;
+  line-height: 1 ;
+  box-sizing:none;
+
+}
+.exam_xuan button::after{
+  width: 0 !important;
+  height: 0 !important;
+}
+.exam_item_clover{
+  border: 1rpx solid #1296db;
+  background-color: #1296db;
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.KeywordSearchNumMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.KeywordSearchNum">
+        <!--@mbg.generated-->
+        <!--@Table keyword_search_num-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="keyword" jdbcType="VARCHAR" property="keyword"/>
+        <result column="num" jdbcType="INTEGER" property="num"/>
+        <result column="times" jdbcType="TIMESTAMP" property="times"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, keyword, num, times
+    </sql>
+    <select id="getSearchWeekData" resultType="com.sky.vo.DataVo">
+    SELECT
+        WEEKDAY( times ) weekDay,
+        COUNT( 1 ) num
+    FROM
+        keyword_search_num
+    WHERE
+        times >= FROM_UNIXTIME( UNIX_TIMESTAMP() - WEEKDAY( NOW()) * 86400, '%Y-%m-%d' )
+    GROUP BY
+        WEEKDAY( times );
+    </select>
+</mapper>

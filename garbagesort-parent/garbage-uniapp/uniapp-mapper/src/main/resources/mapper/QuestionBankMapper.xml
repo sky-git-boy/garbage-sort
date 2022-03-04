@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.QuestionBankMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.QuestionBank">
+        <!--@mbg.generated-->
+        <!--@Table question_bank-->
+        <id column="question_id" jdbcType="INTEGER" property="questionId"/>
+        <result column="garbage_type" jdbcType="TINYINT" property="garbageType"/>
+        <result column="garbage_name" jdbcType="VARCHAR" property="garbageName"/>
+        <result column="analysis" jdbcType="VARCHAR" property="analysis"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        question_id, garbage_type, garbage_name, analysis, remark
+    </sql>
+    <select id="randNum" resultType="com.sky.domain.QuestionBank">
+        select * from question_bank order by rand() limit #{num}
+    </select>
+</mapper>

@@ -1,0 +1,129 @@
+.content{
+	/* left: 750upx; */
+	/* position: absolute; */
+	/* width: 700upx; */
+	/* height: 600upx; */
+	/* background-color: #007AFF; */
+}
+.top-text {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	margin-bottom: 20rpx;
+}
+.gary {
+	color: #999999;
+	margin-left: 8rpx;
+}
+
+/* 图像显示区  start */
+.main-classify {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	direction: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.main-img {
+	width: 240rpx;
+	height: 240rpx;
+	padding: 20rpx;
+}
+
+/* 图像显示区  end */
+.title {
+	text-align: center;
+	margin: 20rpx auto;
+	font-size: 40rpx;
+	/* color: #72c69c; */
+}
+.main-panel {
+	padding: 0 5%;
+}
+.quesion-panel {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	margin: 150rpx 0 0 0;
+	font-size: 40rpx;
+}
+.quesion-panel-item1 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	margin-bottom: 20rpx;
+}
+.quesion-panel-item2,.quesion-panel-item3 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.quesion-panel-item3 .gary{
+	font-size: 30rpx;
+	margin-top: 10rpx;
+}
+.quesion-panel-text {
+	color: #e96900;
+	font-size: 46rpx;
+	margin-right: 20rpx;
+}
+.exam_xuan {
+  margin-top: 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.exam_item {
+  border: 1rpx solid #dedede;
+  width: 300rpx;
+  padding: 20rpx;
+  border-radius: 50rpx;
+  margin: 20rpx auto;
+  background-color: #fff;
+  font-size: 30rpx;
+  line-height: 1 ;
+  box-sizing:none;
+}
+.exam_xuan button::after{
+  width: 0 !important;
+  height: 0 !important;
+}
+.exam_item_clover{
+  border: 1rpx solid #1296db;
+  background-color: #1296db;
+}
+

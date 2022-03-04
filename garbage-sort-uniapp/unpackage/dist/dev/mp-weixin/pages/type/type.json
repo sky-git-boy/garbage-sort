@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "my-popup": "/components/myPopup",
+    "share": "/components/share"
+  }
+}

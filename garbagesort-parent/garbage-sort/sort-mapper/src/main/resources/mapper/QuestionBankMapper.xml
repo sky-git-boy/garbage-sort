@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.QuestionBankMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.QuestionBank">
+        <!--@mbg.generated-->
+        <!--@Table question_bank-->
+        <id column="question_id" jdbcType="INTEGER" property="questionId"/>
+        <result column="garbage_type" jdbcType="TINYINT" property="garbageType"/>
+        <result column="garbage_name" jdbcType="VARCHAR" property="garbageName"/>
+        <result column="analysis" jdbcType="VARCHAR" property="analysis"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        question_id, garbage_type, garbage_name, analysis, remark
+    </sql>
+
+    <select id="selectQuestionBankList" parameterType="com.sky.domain.QuestionBank" resultType="com.sky.vo.DataGridView">
+        select  * from question_bank
+    </select>
+
+    <select id="selectQuestionById" parameterType="Integer" resultType="com.sky.domain.QuestionBank">
+        select * from question_bank where question_id = #{questionId};
+    </select>
+
+    <insert id="insertQuestionBank" parameterType="com.sky.dto.QuestionBankDto">
+        insert into question_bank(garbage_type, garbage_name, analysis, remark)
+        values (#{garbageType}, #{garbageName}, #{analysis}, #{remark})
+    </insert>
+
+    <update id="updateQuestionBank" parameterType="com.sky.domain.QuestionBank">
+        update question_bank
+        set garbage_name = #{garbageName} ,
+            garbage_type = #{garbageType} ,
+            analysis = #{analysis},
+            remark = #{remark}
+        where question_id = #{questionId}
+    </update>
+
+    <delete id="deleteQuestionBank" parameterType="String">
+        delete from question_bank where question_id in
+        <foreach collection="array" item="questionId" open="(" separator="," close=")">
+            #{questionId}
+        </foreach>
+    </delete>
+
+    <select id="selectType" resultType="com.sky.dto.SearchCountDto">
+        SELECT SUM(keyword_search_num.num) value , garbage_type name FROM keyword_search_num,question_bank WHERE keyword_search_num.keyword = question_bank.garbage_name AND question_bank.garbage_type = 1
+        UNION ALL
+        SELECT SUM(keyword_search_num.num) value,garbage_type name FROM keyword_search_num,question_bank WHERE keyword_search_num.keyword = question_bank.garbage_name AND question_bank.garbage_type = 2
+        UNION ALL
+        SELECT SUM(keyword_search_num.num) value,garbage_type name FROM keyword_search_num,question_bank WHERE keyword_search_num.keyword = question_bank.garbage_name AND question_bank.garbage_type = 3
+        UNION ALL
+        SELECT SUM(keyword_search_num.num) value,garbage_type name FROM keyword_search_num,question_bank WHERE keyword_search_num.keyword = question_bank.garbage_name AND question_bank.garbage_type = 4
+    </select>
+
+</mapper>

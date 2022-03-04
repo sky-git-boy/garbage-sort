@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.SysSmsLogMapper">
+  <resultMap id="BaseResultMap" type="com.sky.domain.SysSmsLog">
+    <!--@mbg.generated-->
+    <!--@Table sys_sms_log-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="error_info" jdbcType="VARCHAR" property="errorInfo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, mobile, create_time, code, `status`, `type`, error_info
+  </sql>
+  <select id="getSmsWeekData" resultType="com.sky.vo.DataVo">
+    SELECT
+        WEEKDAY( create_time ) weekDay,
+        COUNT( 1 ) num
+    FROM
+        sys_sms_log
+    WHERE
+        create_time >= FROM_UNIXTIME( UNIX_TIMESTAMP() - WEEKDAY( NOW()) * 86400, '%Y-%m-%d' )
+    GROUP BY
+        WEEKDAY( create_time );
+  </select>
+</mapper>

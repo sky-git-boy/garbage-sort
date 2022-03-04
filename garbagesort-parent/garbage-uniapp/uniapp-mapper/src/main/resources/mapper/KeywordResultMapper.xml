@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.KeywordResultMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.KeywordResult">
+        <!--@mbg.generated-->
+        <!--@Table keyword_result-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="keyword" jdbcType="VARCHAR" property="keyword"/>
+        <result column="result" jdbcType="VARCHAR" property="result"/>
+        <result column="times" jdbcType="TIMESTAMP" property="times"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, keyword, `result`, times
+    </sql>
+</mapper>

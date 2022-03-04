@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.SlideShowMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.SlideShow">
+        <!--@mbg.generated-->
+        <!--@Table slide_show-->
+        <id column="slide" jdbcType="INTEGER" property="slide"/>
+        <result column="user_id" jdbcType="BOOLEAN" property="userId"/>
+        <result column="sort_id" jdbcType="INTEGER" property="sortId"/>
+        <result column="image_url" jdbcType="VARCHAR" property="imageUrl"/>
+        <result column="skip_url" jdbcType="VARCHAR" property="skipUrl"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        slide, user_id, sort_id, image_url, skip_url
+    </sql>
+</mapper>

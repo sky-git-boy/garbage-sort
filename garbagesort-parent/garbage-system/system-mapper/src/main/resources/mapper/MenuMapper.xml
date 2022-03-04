@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.MenuMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.Menu">
+        <!--@mbg.generated-->
+        <!--@Table sys_menu-->
+        <id column="menu_id" jdbcType="BIGINT" property="menuId"/>
+        <result column="parent_id" jdbcType="BIGINT" property="parentId"/>
+        <result column="parent_ids" jdbcType="VARCHAR" property="parentIds"/>
+        <result column="menu_name" jdbcType="VARCHAR" property="menuName"/>
+        <result column="menu_type" jdbcType="CHAR" property="menuType"/>
+        <result column="percode" jdbcType="VARCHAR" property="percode"/>
+        <result column="path" jdbcType="VARCHAR" property="path"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="create_by" jdbcType="VARCHAR" property="createBy"/>
+        <result column="update_by" jdbcType="VARCHAR" property="updateBy"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        menu_id, parent_id, parent_ids, menu_name, menu_type, percode, `path`, remark, `status`,
+        create_time, update_time, create_by, update_by
+    </sql>
+    <select id="queryChildCountByMenuId" resultType="java.lang.Long">
+        select count(1) from sys_menu where parent_id=#{menuId}
+    </select>
+    <select id="queryMenuIdsByRoleId" resultType="java.lang.Long">
+        select main.menu_id from sys_role_menu main
+            where main.role_id = #{roleId} and main.menu_id not in (
+                select m.parent_id from sys_menu m inner join sys_role_menu rm on m.menu_id = rm.menu_id and rm.role_id = #{roleId})
+    </select>
+    <select id="selectMenuListByUserId" resultMap="BaseResultMap">
+        select distinct t1.* from sys_menu t1 inner join sys_role_menu t2
+            inner join sys_role_user t3 on(t1.menu_id=t2.menu_id and t2.role_id=t3.role_id)
+                where t3.user_id=#{userId}
+    </select>
+</mapper>

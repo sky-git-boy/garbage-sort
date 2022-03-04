@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.ImageClassifyMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.ImageClassify">
+        <!--@mbg.generated-->
+        <!--@Table image_classify-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="filepath" jdbcType="VARCHAR" property="filepath"/>
+        <result column="one_keyword" jdbcType="VARCHAR" property="oneKeyword"/>
+        <result column="one_result" jdbcType="VARCHAR" property="oneResult"/>
+        <result column="all_keyword" jdbcType="VARCHAR" property="allKeyword"/>
+        <result column="all_result" jdbcType="VARCHAR" property="allResult"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="times" jdbcType="TIMESTAMP" property="times"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, filepath, one_keyword, one_result, all_keyword, all_result, user_name, times
+    </sql>
+</mapper>

@@ -1,0 +1,4 @@
+##启用哪个配置文件
+spring:
+  profiles:
+    active: dev

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uni-popup": "/components/uni-popup/uni-popup",
+    "my-popup": "/components/myPopup",
+    "share": "/components/share"
+  }
+}

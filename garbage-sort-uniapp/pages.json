@@ -1,0 +1,68 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {}
+		},
+		{
+			"path": "pages/challenge/challengeResult",
+			"style": {}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {}
+		},
+		{
+			"path": "pages/challenge/challenge",
+			"style": {
+				"navigationBarTitleText":"知识小测"
+			}
+		},
+		{
+			"path": "pages/type/type",
+			"style": {}
+		},
+		{
+			"path": "pages/webview/webview",
+			"style": {}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "垃圾分类小程序",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#fff"
+	},
+	"condition": { //模式配置，仅开发期间生效 233333333333
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [{
+			"name": "", //模式名称
+			"path": "", //启动页面，必选
+			"query": "" //启动参数，在页面的onLoad函数里面得到
+		}]
+	},
+	"tabBar": {
+		"color": "#8F8F94",
+		"selectedColor": "#000000",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "主页",
+				"iconPath": "static/tabBar/home.png",
+				"selectedIconPath": "static/tabBar/homeSelected.png"
+			},
+			{
+				"pagePath": "pages/type/type",
+				"text": "分类",
+				"iconPath": "static/tabBar/type.png",
+				"selectedIconPath": "static/tabBar/typeSelected.png"
+			},
+			{
+				"pagePath": "pages/challenge/challenge",
+				"text": "小测",
+				"iconPath": "static/tabBar/challenge.png",
+				"selectedIconPath": "static/tabBar/challengeSelected.png"
+			}
+		]
+	}
+}

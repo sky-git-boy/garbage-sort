@@ -1,0 +1,127 @@
+.fixed-ad{
+	position: fixed;
+	z-index: 999;
+}
+.nav {
+	margin-top: 10upx;
+	display: flex;
+	width: 100%;
+}
+
+.nav-left {
+	width: 30%;
+	/* border: 2upx solid red; */
+	/* background-color: #ddd; */
+}
+
+.nav-left-item {
+	height: 120upx;
+	/* border-right: solid 1px #E0E0E0; */
+	/* border-bottom: solid 1px #E0E0E0; */
+	font-size: 32upx;
+	/* color: #FFFFFF; */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #e6e6e6;
+	color: #484242;
+	margin-bottom: 4upx;
+}
+
+.garbage-gan {
+	background-color: rgb(236,162,58);
+	color: #FFFFFF;
+}
+
+.garbage-shi {
+	background-color: rgb(77,142,244);
+	color: #FFFFFF;
+}
+
+.garbage-huishou {
+	background-color: rgb(75,215,123);
+	color: #FFFFFF;
+}
+
+.garbage-youhai {
+	background-color: rgb(253,66,79);
+	color: #FFFFFF;
+}
+
+/* boder */
+
+.garbage-gan-border {
+	border-left: 10upx solid rgb(236,162,58);
+}
+
+.garbage-shi-border {
+	border-left: 10upx solid rgb(77,142,244);
+}
+
+.garbage-huishou-border {
+	border-left: 10upx solid rgb(75,215,123);
+}
+
+.garbage-youhai-border {
+	border-left: 10upx solid rgb(253,66,79);
+}
+
+.main-img {
+	width: 200upx;
+	height: 200upx;
+}
+
+/* 右边 的样式 */
+.nav-right {
+	width: 70%;
+}
+
+
+.nav-right-item {
+	/* width: 28%; */
+	height: 20upx;
+	/* float: left; */
+	/* text-align: center; */
+	padding: 28upx;
+	font-size: 32upx;
+	/* border: 1upx solid #F24544; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: 10upx;
+}
+.style1{
+	background-color: #f5f5f5;
+}
+
+.active {
+	color: #F24544;
+}
+
+.padding {
+	width: 100%;
+	top: 0;
+	position: fixed;
+	background-color: #F24544;
+}
+
+.content {
+	width: 100%;
+}
+
+/* 右边展示的图片 */
+.view-img{
+	display: flex;
+	flex-direction:row ;
+	justify-content: center;
+}
+.show-img{
+	width:400upx;
+	height:500upx;
+}
+::-webkit-scrollbar {/*取消小程序的默认导航条样式*/
+   width: 0;
+   height: 0;
+   color: transparent;
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.ChallengeResultMapper">
+    <resultMap id="BaseResultMap" type="com.sky.domain.ChallengeResult">
+        <!--@mbg.generated-->
+        <!--@Table challenge_result-->
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="score" jdbcType="INTEGER" property="score"/>
+        <result column="result" jdbcType="VARCHAR" property="result"/>
+        <result column="times" jdbcType="TIMESTAMP" property="times"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        <!--@mbg.generated-->
+        id, score, `result`, times, user_name
+    </sql>
+</mapper>

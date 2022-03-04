@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.sky.domain.User">
+    <!--@mbg.generated-->
+    <!--@Table sys_user-->
+    <id column="user_id" jdbcType="BIGINT" property="userId" />
+    <result column="dept_id" jdbcType="BIGINT" property="deptId" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="user_type" jdbcType="CHAR" property="userType" />
+    <result column="sex" jdbcType="CHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="picture" jdbcType="VARCHAR" property="picture" />
+    <result column="background" jdbcType="CHAR" property="background" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="strong" jdbcType="VARCHAR" property="strong" />
+    <result column="honor" jdbcType="VARCHAR" property="honor" />
+    <result column="introduction" jdbcType="LONGVARCHAR" property="introduction" />
+    <result column="user_rank" jdbcType="CHAR" property="userRank" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="last_login_time" jdbcType="TIMESTAMP" property="lastLoginTime" />
+    <result column="last_login_ip" jdbcType="VARCHAR" property="lastLoginIp" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="union_id" jdbcType="VARCHAR" property="unionId" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+    <result column="scheduling_flag" jdbcType="CHAR" property="schedulingFlag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    user_id, dept_id, user_name, user_type, sex, age, picture, background, phone, email, 
+    strong, honor, introduction, user_rank, `password`, last_login_time, last_login_ip, 
+    `status`, union_id, open_id, create_time, update_time, create_by, update_by, salt, 
+    del_flag, scheduling_flag
+  </sql>
+</mapper>
