@@ -83,12 +83,12 @@ dubbo:
     timeout: 60000
 # 阿里云 oss 配置
 aliyun:
-  accessKeyId: LTAI4G4apy5YdweiL54VTA8o
-  accessKeySecret: zTwkYbyH3IS3eYyi4BDxET3rE7NYJT
+  accessKeyId: xxxxx
+  accessKeySecret: xxxxx
   bucketName: garbage-sorting
   endPoint: oss-cn-shenzhen.aliyuncs.com
 # 腾讯短信服务配置
 tencent:
-  appid: 1400575305
-  appkey: 5c42070857b17bdf549ccaa344d62ed6
-  templateId: 1128009
+  appid: xxxxxx
+  appkey: xxxxxxxxx
+  templateId: xxxxxxxx
