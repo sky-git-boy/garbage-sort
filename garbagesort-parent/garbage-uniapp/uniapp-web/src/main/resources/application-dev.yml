@@ -5,9 +5,9 @@ server:
 
 # 百度请求api 管理
 baidu:
-  appid: 24040004
-  apikey: xT6faqZoykQKqutaHYOou7fo
-  secretkey: LyUeCByAbfE3BYmnz4PymepF3blDlhxh
+  appid: xxxx
+  apikey: xxxx
+  secretkey: xxxx
 
 spring:
   datasource:
